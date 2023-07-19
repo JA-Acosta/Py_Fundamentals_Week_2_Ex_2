@@ -1,0 +1,6 @@
+This is the eighth program derived from 100 program suggested by ChatGPT for a 4 week python course. Since I already have programming expertise, I'll be combining the following 3 prompts into a single program. My main goal is to pay close attention to pythonic syntax, creating/updating git repositories, and developing good commenting habits. Upon completing this program, I'll push it to github and request feedback from my peers.
+
+The following 3 ChatGPT prompts were used:
+25. Write a function that calculates the factorial of a given number.
+26. Create a program that prints the multiplication table for a given number.
+28. Create a function that takes two numbers as parameters and returns their sum.
