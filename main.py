@@ -1,12 +1,12 @@
 '''
 >>> JAAR
->>> 07/23/2023
+>>> 07/24/2023
 >>> Practicing Fundamentals Program 8
->>> Version 1
+>>> Version 2
 '''
 
 '''
->>> Generates a program that will print the multiplication table for a number and will then print the factorial for the number. Afterwards, the program will generate the sum for each pair.
+>>> Generates a program that will print the multiplication table for a number, calculate the sum for each pair, and then calculate the factorial for the number.
 '''
 
 def verify_numbers()-> int :
@@ -23,7 +23,7 @@ def verify_numbers()-> int :
         except ValueError :
             print('\nYour input was invalid.\n\n\tEnter an integer: ', end = '')
         except TypeError :
-            print('\n\n\tEnter an integer greater than zero: ', end = '')
+            print('\n\tEnter a non-negative integer: ', end = '')
         else :
             return number
 
@@ -45,16 +45,17 @@ def main() :
     number = verify_numbers()
     m_table = {i : int(number/i) for i in range(1, abs(number) + 1) if number/i == int(number/i)}
 
-    print("Multiplication Table:")
-    for key, value in m_table.items() :
-        print(f'\t({key}, {value})')
+    if number != 0 :
+        print("Multiplication Table:")
+        for key, value in m_table.items() :
+            print(f'\t({key} x {value})')
 
-    print('\nSum of Pairs in Multiplication Table:')
-    for key, value in m_table.items() :
-        print(f'\t{ key } + { value } = { key + value }')
+        print('\nSum of Pairs in Multiplication Table:')
+        for key, value in m_table.items() :
+            print(f'\t{ key } + { value } = { key + value }')
 
     factorial_answer = factorial( number )
-    print(f'\nFactorial: { factorial_answer }')
+    print(f'\nFactorial:\n\t{number}! = { factorial_answer }')
 
 if __name__ == '__main__' :
     main()
